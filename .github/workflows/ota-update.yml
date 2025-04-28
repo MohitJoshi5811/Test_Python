@@ -20,17 +20,17 @@ jobs:
       #   run: python3 __pycache__/main.cpython-*.pyc
 
       - name: Compile Python to bytecode
-        run: python3 -m compileall main.py
+        run: python3 -m compileall test.py
       
       - name: Run compiled bytecode
         run: |
-          pyc_file=$(ls __pycache__/main.cpython-*.pyc)
+          pyc_file=$(ls __pycache__/test.cpython-*.pyc)
           python3 "$pyc_file"
 
 
 
-      - name: Run Python script
-        run: python3 test.py
+      # - name: Run Python script
+      #   run: python3 test.py
 
 
 # name: CI/CD Pipeline
