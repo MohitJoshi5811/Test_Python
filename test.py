@@ -1,5 +1,5 @@
 
-    # model_path= "C://Z_Project//Project//yolov8n.pt" Demo 5
+    # model_path= "C://Z_Project//Project//yolov8n.pt" Demo 6
 
 import cv2
 import numpy as np
