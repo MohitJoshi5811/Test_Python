@@ -20,7 +20,7 @@ jobs:
       #   run: python3 __pycache__/main.cpython-*.pyc
 
       - name: Compile Python to bytecode
-        run: python -m compileall main.py
+        run: python3 -m compileall main.py
       
       - name: Run compiled bytecode
         run: |
