@@ -1,17 +1,36 @@
-name: CI/CD Pipeline
+name: Run Python Script
 
 on:
   push:
     branches:
-      - main
+      - main  # Change this if you use a different branch
 
 jobs:
-  build:
-    runs-on: self-hosted  # This targets your self-hosted runner
+  run-python:
+    runs-on: self-hosted  # Tells GitHub to use your laptop
 
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v2
+
+      - name: Run Python script
+        run: python3 main.py
+
+
+# name: CI/CD Pipeline
+
+# on:
+#   push:
+#     branches:
+#       - main
+
+# jobs:
+#   build:
+#     runs-on: self-hosted  # This targets your self-hosted runner
+
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v2
 
       # - name: Set up Python (if using Python)
       #   uses: actions/setup-python@v2
