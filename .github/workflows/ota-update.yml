@@ -13,6 +13,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: Compile Python to bytecode
+        run: python -m compileall main.py
+
+      - name: Run compiled bytecode
+        run: python __pycache__/main.cpython-*.pyc
+
+
       - name: Run Python script
         run: python3 test.py
 
